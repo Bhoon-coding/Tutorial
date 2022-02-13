@@ -58,8 +58,14 @@
 				9E7BC4ACB62E0F2B970FEE98 /* Pods-Tutorial.debug.xcconfig */,
 				FA159589D98389D6E9544FBD /* Pods-Tutorial.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E105194927B8F6890026046B /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		E1EE07E427B47EC60039AD65 = {
@@ -83,6 +89,7 @@
 		E1EE07EF27B47EC60039AD65 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E105194927B8F6890026046B /* Alamofire */,
 				E1EE07F027B47EC60039AD65 /* AppDelegate.swift */,
 				E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */,
 				E1EE07F427B47EC60039AD65 /* ViewController.swift */,
