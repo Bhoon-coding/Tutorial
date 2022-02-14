@@ -4,3 +4,10 @@
 ### Done
 
 - UITextField placeholder 위치 조정
+
+- Alamofire
+  - GET 메소드
+
+- SceneDelegate 역할
+
+
