@@ -13,7 +13,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        print("scene")
+        print(
+                """
+                -----------------------------------------------
+                scene:
+                - scene이 앱에 추가될 때 호출.
+                -----------------------------------------------
+                """
+        )
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
@@ -25,6 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 """
                 -----------------------------------------------
                 sceneDidDisconnect:
+                - scene의 연결이 해제될 때 호출. (다시 연결 될 수도 있습니다.)
                 - 필요 없는 자원을 돌려주는 역할
                 - 디스크, 네트워크를 통해 쉽게 불러올 수 있거나 생성이 쉬운 데이터를 돌려줌
                 - 사용자의 input과 같은 재생성이 어려운 데이터는 갖고 있게 작업해줘야 함.
@@ -42,9 +50,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 """
                 -----------------------------------------------
                 sceneDidBecomeActive:
-                1. scene이 setup되고 화면에 보여지면서 사용할 준비가 된 상태.
-                2. inactive -> active
-                3. inactive가 되면서 멈춘 task 재실행할 때도 사용.
+                - app switcher에서 해당 앱이 선택될 때,
+                  (app switcher: 홈 버튼을 두번 누르거나, 아이폰 화면 하단 바 (홈 인디케이터)를 위로 올렸을때 보이는 화면)
+                - scene이 setup되고 화면에 보여지면서 사용할 준비가 된 상태.
+                - inactive -> active
+                - inactive가 되면서 멈춘 task 재실행할 때도 사용.
                 -----------------------------------------------
                 """
         )
@@ -57,8 +67,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 """
                 -----------------------------------------------
                 sceneWillResignActive:
-                1. active -> inactive
-                2. ex) 앱 사용중 전화가 올때
+                - active -> inactive
+                - 다른화면으로의 전환
+                - ex) 앱 사용중 전화가 올때
                 -----------------------------------------------
                 """
         )
