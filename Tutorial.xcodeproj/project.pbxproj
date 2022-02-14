@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF8C64795C070F8F1AC3556C /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */; };
+		E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171451D27BA155400E728E2 /* AlamofireViewController.swift */; };
 		E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F027B47EC60039AD65 /* AppDelegate.swift */; };
 		E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */; };
 		E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F427B47EC60039AD65 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7BC4ACB62E0F2B970FEE98 /* Pods-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Tutorial/Pods-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		E171451D27BA155400E728E2 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		E1EE07ED27B47EC60039AD65 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE07F027B47EC60039AD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +66,17 @@
 		E105194927B8F6890026046B /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				E171451D27BA155400E728E2 /* AlamofireViewController.swift */,
 			);
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		E171451F27BA15BE00E728E2 /* UITextFieldPlaceholder */ = {
+			isa = PBXGroup;
+			children = (
+				E1EE080427B495700039AD65 /* UITextFieldPlaceholderViewController.swift */,
+			);
+			path = UITextFieldPlaceholder;
 			sourceTree = "<group>";
 		};
 		E1EE07E427B47EC60039AD65 = {
@@ -89,11 +100,11 @@
 		E1EE07EF27B47EC60039AD65 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E171451F27BA15BE00E728E2 /* UITextFieldPlaceholder */,
 				E105194927B8F6890026046B /* Alamofire */,
 				E1EE07F027B47EC60039AD65 /* AppDelegate.swift */,
 				E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */,
 				E1EE07F427B47EC60039AD65 /* ViewController.swift */,
-				E1EE080427B495700039AD65 /* UITextFieldPlaceholderViewController.swift */,
 				E1EE07F627B47EC60039AD65 /* Main.storyboard */,
 				E1EE07F927B47EC70039AD65 /* Assets.xcassets */,
 				E1EE07FB27B47EC70039AD65 /* LaunchScreen.storyboard */,
@@ -217,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */,
 				E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */,
 				E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */,
 				E1EE080527B495700039AD65 /* UITextFieldPlaceholderViewController.swift in Sources */,
