@@ -12,9 +12,33 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    // MARK: UI Property
+    lazy var testButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("테스트", for: .normal)
+        button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .lightGray
+        setUpUI()
         
+    }
+    
+    func setUpUI() {
+        // MARK: addSubView
+        view.addSubview(testButton)
+        
+        // MARK: Layout
+        testButton.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+    }
+    
+    @objc func tappedButton() {
+        print("Test")
     }
 
 }
