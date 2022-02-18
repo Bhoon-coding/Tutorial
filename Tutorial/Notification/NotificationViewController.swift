@@ -76,23 +76,3 @@ class NotificationViewController: UIViewController {
     }
     
 }
-
-//  MARK: AlarmViewController Extension
-
-extension NotificationViewController: UNUserNotificationCenterDelegate {
-    
-    // 앱이 foreground 상태에 있을때도 알림을 받게 해줌.
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if #available(iOS 14.0, *) {
-            completionHandler([.banner, .list, .badge, .sound])
-        } else {
-            completionHandler([.badge, .sound, .alert])
-        }
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?) {
-        let settingsViewController = UIViewController()
-        settingsViewController.view.backgroundColor = .gray
-        self.present(settingsViewController, animated: true, completion: nil)
-    }
-}
