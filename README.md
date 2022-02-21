@@ -1,6 +1,15 @@
 # Tutorial
 몰랐던 기능들을 블로깅하며 정리하기 위한 소스코드
 
+## 확인방법 
+
+![스크린샷 2022-02-21 오전 11 14 23](https://user-images.githubusercontent.com/64088377/154878324-c1ff04d6-6806-4f1c-bebb-3434ed383190.png)
+
+
+1. Main 스토리보드에서 해당부분을 클릭
+2. 좌측 Navigators에서 확인하고자하는 ViewController 이름을 3번에 기입 
+3. 우측 Inspectors - Custom Class - Class에 해당 ViewController 이름을 입력.
+
 
 
 ## Done
