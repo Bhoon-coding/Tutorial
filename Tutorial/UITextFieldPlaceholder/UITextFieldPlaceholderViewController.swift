@@ -29,8 +29,8 @@ class UITextFieldPlaceholderViewController: UIViewController {
     private func setUpUI() {
         view.addSubview(textField)
         
-        textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        textField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
