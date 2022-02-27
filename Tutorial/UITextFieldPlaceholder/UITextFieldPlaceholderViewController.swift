@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class UITextFieldPlaceholderViewController: UIViewController {
 
@@ -19,6 +20,17 @@ class UITextFieldPlaceholderViewController: UIViewController {
         return textField
     }()
     
+    lazy var confirmButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("확인", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 1
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
@@ -28,18 +40,23 @@ class UITextFieldPlaceholderViewController: UIViewController {
 
     private func setUpUI() {
         view.addSubview(textField)
+        view.addSubview(confirmButton)
         
         textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         textField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
+        confirmButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+        confirmButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        confirmButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        confirmButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
 }
 
 extension UITextField {
     func leftPadding() {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: self.frame.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
         self.leftView = paddingView
         self.leftViewMode = ViewMode.always
     }
