@@ -10,6 +10,7 @@
 		DF8C64795C070F8F1AC3556C /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */; };
 		E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126476C27C5EEB2000A3C49 /* PreviewView.swift */; };
 		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
+		E1532F1927CBC1D30068E914 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1532F1827CBC1D30068E914 /* Extension.swift */; };
 		E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171451D27BA155400E728E2 /* AlamofireViewController.swift */; };
 		E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F027B47EC60039AD65 /* AppDelegate.swift */; };
 		E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 		9E7BC4ACB62E0F2B970FEE98 /* Pods-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Tutorial/Pods-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		E126476C27C5EEB2000A3C49 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = Tutorial/Camera/View/PreviewView.swift; sourceTree = SOURCE_ROOT; };
 		E126476E27C5EF46000A3C49 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		E1532F1827CBC1D30068E914 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E171451D27BA155400E728E2 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		E1EE07ED27B47EC60039AD65 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE07F027B47EC60039AD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E1532F1727CBC1C70068E914 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E1532F1827CBC1D30068E914 /* Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		E171451F27BA15BE00E728E2 /* UITextFieldPlaceholder */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		E1EE07EF27B47EC60039AD65 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E1532F1727CBC1C70068E914 /* Helper */,
 				E126476927C5EE4D000A3C49 /* Camera */,
 				E1F38AB827BB342B008DD875 /* AppDelegate & SceneDelegate */,
 				E1F38AB527BB312C008DD875 /* Notification */,
@@ -290,6 +301,7 @@
 				E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */,
 				E1F38ABC27BB345F008DD875 /* SceneDelegateMethods.swift in Sources */,
 				E1F38AB727BB3142008DD875 /* NotificationViewController.swift in Sources */,
+				E1532F1927CBC1D30068E914 /* Extension.swift in Sources */,
 				E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */,
 				E1EE080527B495700039AD65 /* UITextFieldPlaceholderViewController.swift in Sources */,
 				E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */,
