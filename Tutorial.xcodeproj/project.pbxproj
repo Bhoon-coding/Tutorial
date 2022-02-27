@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF8C64795C070F8F1AC3556C /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */; };
 		E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126476C27C5EEB2000A3C49 /* PreviewView.swift */; };
+		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
 		E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171451D27BA155400E728E2 /* AlamofireViewController.swift */; };
 		E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F027B47EC60039AD65 /* AppDelegate.swift */; };
 		E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7BC4ACB62E0F2B970FEE98 /* Pods-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Tutorial/Pods-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		E126476C27C5EEB2000A3C49 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = Tutorial/Camera/View/PreviewView.swift; sourceTree = SOURCE_ROOT; };
+		E126476E27C5EF46000A3C49 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		E171451D27BA155400E728E2 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		E1EE07ED27B47EC60039AD65 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE07F027B47EC60039AD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,8 @@
 		E126476A27C5EE91000A3C49 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E126476C27C5EEB2000A3C49 /* PreviewView.swift */,
+				E126476E27C5EF46000A3C49 /* Camera.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,7 +102,6 @@
 		E126476B27C5EE99000A3C49 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E126476C27C5EEB2000A3C49 /* PreviewView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1EE07FD27B47EC70039AD65 /* LaunchScreen.storyboard in Resources */,
+				E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */,
 				E1EE07FA27B47EC70039AD65 /* Assets.xcassets in Resources */,
 				E1EE07F827B47EC60039AD65 /* Main.storyboard in Resources */,
 			);
