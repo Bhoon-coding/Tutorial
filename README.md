@@ -22,7 +22,11 @@
 ### UITextField
 
 - UITextField placeholder 위치 조정
-<img width="288" alt="스크린샷 2022-02-21 오전 11 07 43" src="https://user-images.githubusercontent.com/64088377/154877534-2e78f1f2-dcd3-46dd-b035-7f9a69cc2db0.png">
+  - <img width="20%" alt="스크린샷 2022-02-21 오전 11 07 43" src="https://user-images.githubusercontent.com/64088377/154877534-2e78f1f2-dcd3-46dd-b035-7f9a69cc2db0.png">
+
+- (키보드 띄운 상태) 빈화면 터치시 키보드 가리기
+  - <img width="20%" src = "https://user-images.githubusercontent.com/64088377/155887671-0207be04-d7b7-4d29-9a9a-3bc5152e9872.gif">
+
 
 
 ----
