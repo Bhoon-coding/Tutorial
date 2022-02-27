@@ -34,11 +34,29 @@ class UITextFieldPlaceholderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
+        
+        
+        
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(keyboardWillShow),
+//            name: UIResponder.keyboardWillShowNotification,
+//            object: nil
+//        )
+//
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(keyboardWillHide),
+//            name: UIResponder.keyboardWillHideNotification,
+//            object: nil
+//        )
         setUpUI()
+        hideKeyboard()
+        
     }
 
-
     private func setUpUI() {
+        
         view.addSubview(textField)
         view.addSubview(confirmButton)
         
@@ -52,6 +70,16 @@ class UITextFieldPlaceholderViewController: UIViewController {
         confirmButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         confirmButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
+    
+    
+    
+//    @objc func keyboardWillShow(_ sender: Notification) {
+//        view.frame.origin.y = -150
+//    }
+    
+//    @objc func keyboardWillHide(_ sender: Notification) {
+//        confirmButton.frame.origin.y = 0
+//    }
 }
 
 extension UITextField {
