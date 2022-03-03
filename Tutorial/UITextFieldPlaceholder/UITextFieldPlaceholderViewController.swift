@@ -31,6 +31,10 @@ class UITextFieldPlaceholderViewController: UIViewController {
         return button
     }()
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
@@ -51,7 +55,7 @@ class UITextFieldPlaceholderViewController: UIViewController {
 //            object: nil
 //        )
         setUpUI()
-        hideKeyboard()
+//        hideKeyboard()
         
     }
 
