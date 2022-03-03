@@ -12,7 +12,7 @@
 		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
 		E1532F1927CBC1D30068E914 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1532F1827CBC1D30068E914 /* Extension.swift */; };
 		E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171451D27BA155400E728E2 /* AlamofireViewController.swift */; };
-		E1E15C1527D07E8E0041349E /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E15C1427D07E8E0041349E /* ScrollViewController.swift */; };
+		E1E15C1727D089090041349E /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E15C1627D089090041349E /* UIScrollViewController.swift */; };
 		E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F027B47EC60039AD65 /* AppDelegate.swift */; };
 		E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */; };
 		E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F427B47EC60039AD65 /* ViewController.swift */; };
@@ -32,7 +32,7 @@
 		E126476E27C5EF46000A3C49 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		E1532F1827CBC1D30068E914 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E171451D27BA155400E728E2 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
-		E1E15C1427D07E8E0041349E /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		E1E15C1627D089090041349E /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		E1EE07ED27B47EC60039AD65 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE07F027B47EC60039AD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		E1E15C1327D07E7C0041349E /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				E1E15C1427D07E8E0041349E /* ScrollViewController.swift */,
+				E1E15C1627D089090041349E /* UIScrollViewController.swift */,
 			);
 			path = UIScrollView;
 			sourceTree = "<group>";
@@ -314,10 +314,10 @@
 				E1F38AB727BB3142008DD875 /* NotificationViewController.swift in Sources */,
 				E1532F1927CBC1D30068E914 /* Extension.swift in Sources */,
 				E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */,
-				E1E15C1527D07E8E0041349E /* ScrollViewController.swift in Sources */,
 				E1EE080527B495700039AD65 /* UITextFieldPlaceholderViewController.swift in Sources */,
 				E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */,
 				E1F38ABA27BB3451008DD875 /* AppDelegateMethods.swift in Sources */,
+				E1E15C1727D089090041349E /* UIScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
