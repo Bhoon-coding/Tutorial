@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="68" y="103"/>
         </scene>
-        <!--Scroll View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="iCl-BU-v8r">
             <objects>
-                <viewController id="wnP-rr-UWM" customClass="UIScrollViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wnP-rr-UWM" customClass="TableViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFy-qs-7pE" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
