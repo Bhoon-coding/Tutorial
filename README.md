@@ -17,8 +17,9 @@
 
 1. [UITextField](#uitextfield)
 2. [UIScrollView](#uiscrollview)
-3. [Alamofire](#alamofire)
-4. [Local notification](#local-notification)
+3. [UITableView](#uitableview)
+4. [Alamofire](#alamofire)
+5. [Local notification](#local-notification)
 
 ### UITextField
 
@@ -37,10 +38,21 @@
 - UIScrollView 구현
   - <img width="20%" src = "https://user-images.githubusercontent.com/64088377/156502708-959f20d8-65b3-4107-b70a-86918855fb6d.gif">
   - UIscrollView 구성시
-    - UIscrollView -> contentsView (width,height 필수로 지정 해야한다.)
+    - UIscrollView -> contentsView (width,height 필수로 지정 해야합니다.)
 
 
 ----
+
+### UITableView
+
+- UITableView 구현 
+  - tableView에 register()를 이용해 불러올 Cell을 지정
+  - UITableViewDelegate, UITableViewDataSource를 이용해 Cell 및 테이블뷰를 어떻게 나타낼지 정합니다.
+  - viewDidLayoutSubviews 메소드로 테이블뷰의 크기를 정합니다.
+
+  - <img width="20%" alt="스크린샷 2022-03-06 오후 11 35 31" src="https://user-images.githubusercontent.com/64088377/156927902-884a4cbc-f4cf-415e-995b-45f773e66ff7.png">
+
+
 
 ### Alamofire
 
