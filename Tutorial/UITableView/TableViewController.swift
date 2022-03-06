@@ -11,13 +11,12 @@ class TableViewController: UIViewController {
     
     private let menuTable: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
         view.addSubview(menuTable)
         
         menuTable.delegate = self
@@ -39,7 +38,14 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hi"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 }
