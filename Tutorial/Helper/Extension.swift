@@ -4,9 +4,8 @@
 //
 //  Created by BH on 2022/02/27.
 //
-
-//import Foundation
-//import UIKit
+//
+import UIKit
 //
 //extension UIViewController {
 //    func hideKeyboard() {
@@ -18,3 +17,10 @@
 //        view.endEditing(true)
 //    }
 //}
+extension UITextField {
+    func leftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
+    }
+}
