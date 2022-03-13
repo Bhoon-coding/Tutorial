@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class MainViewController: UIViewController, SendDataDelegate {
+class MainViewController: UIViewController {
     
     // MARK: UI Properties
     lazy var dataLabel: UILabel = {
@@ -32,10 +32,6 @@ class MainViewController: UIViewController, SendDataDelegate {
         view.backgroundColor = .lightGray
         setUpUI()
         
-    }
-    
-    func sendData(data: String) {
-        dataLabel.text = data
     }
     
     func setUpUI() {
@@ -62,6 +58,12 @@ class MainViewController: UIViewController, SendDataDelegate {
         present(detailVC, animated: true, completion: nil)
     }
 
+}
+
+extension MainViewController: SendDataDelegate {
+    func sendData(data: String) {
+        dataLabel.text = data
+    }
 }
 
 
