@@ -18,8 +18,9 @@
 1. [UITextField](#uitextfield)
 2. [UIScrollView](#uiscrollview)
 3. [UITableView](#uitableview)
-4. [Alamofire](#alamofire)
-5. [Local notification](#local-notification)
+4. [Delegate를 이용한 ViewController간 데이터전달](#delegate를-이용한-viewcontroller간-데이터전달)
+5. [Alamofire](#alamofire)
+6. [Local notification](#local-notification)
 
 ### UITextField
 
@@ -46,13 +47,23 @@
 ### UITableView
 
 - UITableView 구현 
-  - tableView에 register()를 이용해 불러올 Cell을 지정
+  - tableView에 register()를 이용해 불러올 Cell을 지정 합니다.
   - UITableViewDelegate, UITableViewDataSource를 이용해 Cell 및 테이블뷰를 어떻게 나타낼지 정합니다.
   - viewDidLayoutSubviews 메소드로 테이블뷰의 크기를 정합니다.
 
   - <img width="20%" alt="스크린샷 2022-03-06 오후 11 35 31" src="https://user-images.githubusercontent.com/64088377/156927902-884a4cbc-f4cf-415e-995b-45f773e66ff7.png">
 
+----
 
+### Delegate를 이용한 ViewController간 데이터전달
+
+- VC2에서 데이터를 입력한 후 저장하면 VC1에 저장되게 구현 하였습니다.
+- protocol의 생성, 채택, 위임의 개념과 delegate의 사용 패턴을 파악할수 있는 계기가 되었습니다.
+
+
+- <img width="20%" src="https://user-images.githubusercontent.com/64088377/158055696-8f1ac5e9-0ede-4995-aa86-54ab8496277b.gif">
+
+----
 
 ### Alamofire
 
