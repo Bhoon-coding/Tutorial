@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF8C64795C070F8F1AC3556C /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */; };
 		E113637427D4FC270062AE93 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113637327D4FC270062AE93 /* TableViewCell.swift */; };
 		E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126476C27C5EEB2000A3C49 /* PreviewView.swift */; };
 		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
@@ -15,6 +14,8 @@
 		E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171451D27BA155400E728E2 /* AlamofireViewController.swift */; };
 		E1A650C027D1E4F10022A900 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A650BF27D1E4F10022A900 /* TableViewController.swift */; };
 		E1E15C1727D089090041349E /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E15C1627D089090041349E /* UIScrollViewController.swift */; };
+		E1E20EEC27DDA83300ABBC8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E20EEB27DDA83300ABBC8A /* MainViewController.swift */; };
+		E1E20EEE27DDB4A500ABBC8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E20EED27DDB4A500ABBC8A /* DetailViewController.swift */; };
 		E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F027B47EC60039AD65 /* AppDelegate.swift */; };
 		E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */; };
 		E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EE07F427B47EC60039AD65 /* ViewController.swift */; };
@@ -37,6 +38,8 @@
 		E171451D27BA155400E728E2 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		E1A650BF27D1E4F10022A900 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E1E15C1627D089090041349E /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
+		E1E20EEB27DDA83300ABBC8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E1E20EED27DDB4A500ABBC8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E1EE07ED27B47EC60039AD65 /* Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE07F027B47EC60039AD65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EE07F227B47EC60039AD65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8C64795C070F8F1AC3556C /* Pods_Tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,15 @@
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
+		E1E20EEA27DDA39E00ABBC8A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				E1E20EEB27DDA83300ABBC8A /* MainViewController.swift */,
+				E1E20EED27DDB4A500ABBC8A /* DetailViewController.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		E1EE07E427B47EC60039AD65 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +179,7 @@
 		E1EE07EF27B47EC60039AD65 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E1E20EEA27DDA39E00ABBC8A /* Delegate */,
 				E1A650BE27D1E4AD0022A900 /* UITableView */,
 				E1E15C1327D07E7C0041349E /* UIScrollView */,
 				E1532F1727CBC1C70068E914 /* Helper */,
@@ -325,6 +337,7 @@
 				E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */,
 				E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */,
 				E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */,
+				E1E20EEC27DDA83300ABBC8A /* MainViewController.swift in Sources */,
 				E1A650C027D1E4F10022A900 /* TableViewController.swift in Sources */,
 				E1F38ABC27BB345F008DD875 /* SceneDelegateMethods.swift in Sources */,
 				E1F38AB727BB3142008DD875 /* NotificationViewController.swift in Sources */,
@@ -332,6 +345,7 @@
 				E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */,
 				E1EE080527B495700039AD65 /* UITextFieldPlaceholderViewController.swift in Sources */,
 				E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */,
+				E1E20EEE27DDB4A500ABBC8A /* DetailViewController.swift in Sources */,
 				E1F38ABA27BB3451008DD875 /* AppDelegateMethods.swift in Sources */,
 				E1E15C1727D089090041349E /* UIScrollViewController.swift in Sources */,
 			);
