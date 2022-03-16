@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633B5A5E5B42112E73A6A3D7 /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */; };
 		E113637427D4FC270062AE93 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113637327D4FC270062AE93 /* TableViewCell.swift */; };
 		E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126476C27C5EEB2000A3C49 /* PreviewView.swift */; };
 		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633B5A5E5B42112E73A6A3D7 /* Pods_Tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +502,7 @@
 				DEVELOPMENT_TEAM = U7HG3H3F72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tutorial/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tutorial;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -530,6 +533,7 @@
 				DEVELOPMENT_TEAM = U7HG3H3F72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tutorial/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tutorial;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
