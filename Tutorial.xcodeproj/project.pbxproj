@@ -11,6 +11,7 @@
 		E101AB2727E1CBF000783973 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2627E1CBF000783973 /* MovieModel.swift */; };
 		E101AB2B27E1CC2F00783973 /* URLSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2A27E1CC2F00783973 /* URLSessionController.swift */; };
 		E101AB2D27E1CC5B00783973 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2C27E1CC5B00783973 /* MovieService.swift */; };
+		E101AB2F27E1CFEB00783973 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2E27E1CFEB00783973 /* APIConstant.swift */; };
 		E113637427D4FC270062AE93 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113637327D4FC270062AE93 /* TableViewCell.swift */; };
 		E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126476C27C5EEB2000A3C49 /* PreviewView.swift */; };
 		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
@@ -38,6 +39,7 @@
 		E101AB2627E1CBF000783973 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		E101AB2A27E1CC2F00783973 /* URLSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionController.swift; sourceTree = "<group>"; };
 		E101AB2C27E1CC5B00783973 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		E101AB2E27E1CFEB00783973 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		E113637327D4FC270062AE93 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E126476C27C5EEB2000A3C49 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = Tutorial/Camera/View/PreviewView.swift; sourceTree = SOURCE_ROOT; };
 		E126476E27C5EF46000A3C49 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				E1532F1827CBC1D30068E914 /* Extension.swift */,
+				E101AB2E27E1CFEB00783973 /* APIConstant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */,
 				E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */,
 				E1E20EEC27DDA83300ABBC8A /* MainViewController.swift in Sources */,
+				E101AB2F27E1CFEB00783973 /* APIConstant.swift in Sources */,
 				E1A650C027D1E4F10022A900 /* TableViewController.swift in Sources */,
 				E101AB2D27E1CC5B00783973 /* MovieService.swift in Sources */,
 				E1F38ABC27BB345F008DD875 /* SceneDelegateMethods.swift in Sources */,
