@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		633B5A5E5B42112E73A6A3D7 /* Pods_Tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */; };
+		E101AB2727E1CBF000783973 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2627E1CBF000783973 /* MovieModel.swift */; };
+		E101AB2B27E1CC2F00783973 /* URLSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2A27E1CC2F00783973 /* URLSessionController.swift */; };
+		E101AB2D27E1CC5B00783973 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2C27E1CC5B00783973 /* MovieService.swift */; };
+		E101AB2F27E1CFEB00783973 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101AB2E27E1CFEB00783973 /* APIConstant.swift */; };
 		E113637427D4FC270062AE93 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113637327D4FC270062AE93 /* TableViewCell.swift */; };
 		E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126476C27C5EEB2000A3C49 /* PreviewView.swift */; };
 		E126476F27C5EF46000A3C49 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126476E27C5EF46000A3C49 /* Camera.storyboard */; };
 		E1532F1927CBC1D30068E914 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1532F1827CBC1D30068E914 /* Extension.swift */; };
+		E15C80EE27E30F750035C8D5 /* movieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15C80ED27E30F750035C8D5 /* movieListCollectionViewCell.swift */; };
 		E171451E27BA155400E728E2 /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171451D27BA155400E728E2 /* AlamofireViewController.swift */; };
 		E1A650C027D1E4F10022A900 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A650BF27D1E4F10022A900 /* TableViewController.swift */; };
 		E1E15C1727D089090041349E /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E15C1627D089090041349E /* UIScrollViewController.swift */; };
@@ -32,10 +37,15 @@
 /* Begin PBXFileReference section */
 		07F2009257F44CFE86FB986B /* Pods_Tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7BC4ACB62E0F2B970FEE98 /* Pods-Tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutorial.debug.xcconfig"; path = "Target Support Files/Pods-Tutorial/Pods-Tutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		E101AB2627E1CBF000783973 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		E101AB2A27E1CC2F00783973 /* URLSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionController.swift; sourceTree = "<group>"; };
+		E101AB2C27E1CC5B00783973 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		E101AB2E27E1CFEB00783973 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		E113637327D4FC270062AE93 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E126476C27C5EEB2000A3C49 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = Tutorial/Camera/View/PreviewView.swift; sourceTree = SOURCE_ROOT; };
 		E126476E27C5EF46000A3C49 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		E1532F1827CBC1D30068E914 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E15C80ED27E30F750035C8D5 /* movieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieListCollectionViewCell.swift; sourceTree = "<group>"; };
 		E171451D27BA155400E728E2 /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		E1A650BF27D1E4F10022A900 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E1E15C1627D089090041349E /* UIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +95,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E101AB2527E1CBDC00783973 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				E101AB2927E1CC2000783973 /* ViewController */,
+				E101AB2827E1CC1400783973 /* Model */,
+				E101AB2C27E1CC5B00783973 /* MovieService.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		E101AB2827E1CC1400783973 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E101AB2627E1CBF000783973 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E101AB2927E1CC2000783973 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E101AB2A27E1CC2F00783973 /* URLSessionController.swift */,
+				E15C80ED27E30F750035C8D5 /* movieListCollectionViewCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		E105194927B8F6890026046B /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E1532F1827CBC1D30068E914 /* Extension.swift */,
+				E101AB2E27E1CFEB00783973 /* APIConstant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -181,6 +219,7 @@
 		E1EE07EF27B47EC60039AD65 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E101AB2527E1CBDC00783973 /* URLSession */,
 				E1E20EEA27DDA39E00ABBC8A /* Delegate */,
 				E1A650BE27D1E4AD0022A900 /* UITableView */,
 				E1E15C1327D07E7C0041349E /* UIScrollView */,
@@ -340,14 +379,19 @@
 				E1EE07F527B47EC60039AD65 /* ViewController.swift in Sources */,
 				E126476D27C5EEB2000A3C49 /* PreviewView.swift in Sources */,
 				E1E20EEC27DDA83300ABBC8A /* MainViewController.swift in Sources */,
+				E101AB2F27E1CFEB00783973 /* APIConstant.swift in Sources */,
 				E1A650C027D1E4F10022A900 /* TableViewController.swift in Sources */,
+				E101AB2D27E1CC5B00783973 /* MovieService.swift in Sources */,
 				E1F38ABC27BB345F008DD875 /* SceneDelegateMethods.swift in Sources */,
 				E1F38AB727BB3142008DD875 /* NotificationViewController.swift in Sources */,
+				E101AB2B27E1CC2F00783973 /* URLSessionController.swift in Sources */,
 				E1532F1927CBC1D30068E914 /* Extension.swift in Sources */,
 				E1EE07F127B47EC60039AD65 /* AppDelegate.swift in Sources */,
 				E1EE080527B495700039AD65 /* UITextFieldPlaceholderViewController.swift in Sources */,
 				E1EE07F327B47EC60039AD65 /* SceneDelegate.swift in Sources */,
+				E101AB2727E1CBF000783973 /* MovieModel.swift in Sources */,
 				E1E20EEE27DDB4A500ABBC8A /* DetailViewController.swift in Sources */,
+				E15C80EE27E30F750035C8D5 /* movieListCollectionViewCell.swift in Sources */,
 				E1F38ABA27BB3451008DD875 /* AppDelegateMethods.swift in Sources */,
 				E1E15C1727D089090041349E /* UIScrollViewController.swift in Sources */,
 			);
