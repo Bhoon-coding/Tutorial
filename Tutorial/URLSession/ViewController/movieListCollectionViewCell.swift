@@ -16,19 +16,20 @@ class movieListCollectionViewCell: UICollectionViewCell {
     static let identifier = "movieListCollectionViewCell"
     
     lazy var movieImageView: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .brown
         return imageView
     }()
     
     lazy var movieTitleLabel: UILabel = {
-        let label = UILabel(frame: .zero)
+        let label = UILabel()
+        backgroundColor = .systemBlue
         return label
     }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         
     }
     
@@ -46,8 +47,14 @@ class movieListCollectionViewCell: UICollectionViewCell {
         
         contentView.addSubview(movieImageView)
         contentView.addSubview(movieTitleLabel)
-//        movieTitleLabel.snp.makeConstraints {
-//            $0.leading.top.equalToSuperview()
-//        }
+        
+        movieImageView.snp.makeConstraints {
+            $0.leading.top.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(60)
+        }
+        movieTitleLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(20)
+        }
     }
 }

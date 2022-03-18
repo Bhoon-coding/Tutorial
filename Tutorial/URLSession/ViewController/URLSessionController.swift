@@ -18,7 +18,6 @@ class UrlSessionViewController: UIViewController {
     lazy var movieListCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
         return collectionView
     }()
     
@@ -66,7 +65,6 @@ class UrlSessionViewController: UIViewController {
                 
                 if let decodedData = movieData as? MovieModel {
                     self.movieLists = decodedData.items
-                    print("통신성공: \(decodedData)")
                     DispatchQueue.main.async {
                         self.movieListCollectionView.reloadData()
                     }
@@ -88,8 +86,7 @@ extension UrlSessionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCollectionViewCell.identifier, for: indexPath) as! movieListCollectionViewCell
         
-        let movieList = movieLists[indexPath.row]
-        cell.setUpCell(with: movieList)
+        cell.setUpCell(with: movieLists[indexPath.row])
         cell.backgroundColor = .red
         return cell
     }
