@@ -23,6 +23,7 @@ class movieListCollectionViewCell: UICollectionViewCell {
     
     lazy var movieTitleLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .white
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
@@ -58,7 +59,6 @@ class movieListCollectionViewCell: UICollectionViewCell {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalTo(movieImageView.snp.bottom)
             $0.bottom.equalToSuperview()
-            $0.leading.trailing.equalToSuperview()
         }
     }
 }
