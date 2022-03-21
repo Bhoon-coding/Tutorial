@@ -29,7 +29,6 @@ class UrlSessionViewController: UIViewController {
         setUpUI()
         setUpLayout()
         getMovieData()
-//        movieListCollectionView.reloadData()
         
     }
     
@@ -65,9 +64,11 @@ class UrlSessionViewController: UIViewController {
                 
                 if let decodedData = movieData as? MovieModel {
                     self.movieLists = decodedData.items
+                    
                     DispatchQueue.main.async {
                         self.movieListCollectionView.reloadData()
                     }
+                    
                     return
                 }
             case .failure(let movieData):
@@ -87,7 +88,6 @@ extension UrlSessionViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCollectionViewCell.identifier, for: indexPath) as! movieListCollectionViewCell
         
         cell.setUpCell(with: movieLists[indexPath.row])
-        cell.backgroundColor = .red
         return cell
     }
     
