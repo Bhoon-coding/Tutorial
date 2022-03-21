@@ -24,7 +24,8 @@ class movieListCollectionViewCell: UICollectionViewCell {
     
     lazy var movieTitleLabel: UILabel = {
         let label = UILabel()
-        backgroundColor = .systemBlue
+//        backgroundColor = .systemBlue
+        label.textAlignment = .center
         return label
     }()
 
@@ -42,7 +43,9 @@ class movieListCollectionViewCell: UICollectionViewCell {
     
     func setUpCell(with movies: Movie) {
         
-        movieImageView.image = UIImage(named: movies.image)
+        let url = URL(string: movies.image)
+        let data = try? Data(contentsOf: url!)
+        movieImageView.image = UIImage(data: data!)
         movieTitleLabel.text = movies.title
         
         contentView.addSubview(movieImageView)
@@ -51,10 +54,12 @@ class movieListCollectionViewCell: UICollectionViewCell {
         movieImageView.snp.makeConstraints {
             $0.leading.top.trailing.equalToSuperview()
             $0.bottom.equalToSuperview().inset(60)
+//            $0.size.equalTo(60)
         }
         movieTitleLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(20)
+            $0.top.equalTo(movieImageView.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
         }
     }
 }
