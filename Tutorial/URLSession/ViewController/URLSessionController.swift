@@ -29,7 +29,6 @@ class UrlSessionViewController: UIViewController {
         setUpUI()
         setUpLayout()
         getMovieData()
-//        movieListCollectionView.reloadData()
         
     }
     
@@ -66,10 +65,10 @@ class UrlSessionViewController: UIViewController {
                 if let decodedData = movieData as? MovieModel {
                     self.movieLists = decodedData.items
                     
-                    dump(self.movieLists)
                     DispatchQueue.main.async {
                         self.movieListCollectionView.reloadData()
                     }
+                    
                     return
                 }
             case .failure(let movieData):
