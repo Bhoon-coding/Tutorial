@@ -18,6 +18,7 @@ class UrlSessionViewController: UIViewController {
     lazy var movieListCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
         return collectionView
     }()
     
@@ -27,8 +28,11 @@ class UrlSessionViewController: UIViewController {
         super.viewDidLoad()
         
         setUpUI()
-        setUpLayout()
         getMovieData()
+        
+        movieListCollectionView.dataSource = self
+        movieListCollectionView.delegate = self
+        movieListCollectionView.register(movieListCollectionViewCell.self, forCellWithReuseIdentifier: movieListCollectionViewCell.identifier)
         
     }
     
@@ -37,16 +41,6 @@ class UrlSessionViewController: UIViewController {
     func setUpUI() {
         
         view.addSubview(movieListCollectionView)
-        
-        movieListCollectionView.dataSource = self
-        movieListCollectionView.delegate = self
-        movieListCollectionView.register(movieListCollectionViewCell.self, forCellWithReuseIdentifier: movieListCollectionViewCell.identifier)
-        
-        
-    }
-    
-    func setUpLayout() {
-        
         movieListCollectionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
