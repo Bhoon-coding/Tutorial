@@ -18,13 +18,13 @@ class movieListCollectionViewCell: UICollectionViewCell {
     lazy var movieImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .brown
         return imageView
     }()
     
     lazy var movieTitleLabel: UILabel = {
         let label = UILabel()
-        backgroundColor = .systemBlue
+        label.textAlignment = .center
+        label.numberOfLines = 0
         return label
     }()
 
@@ -41,9 +41,11 @@ class movieListCollectionViewCell: UICollectionViewCell {
     // MARK: Methods
     
     func setUpCell(with movies: Movie) {
-        
-        movieImageView.image = UIImage(named: movies.image)
+        guard let url = URL(string: movies.image) else { return }
+        guard let data = try? Data(contentsOf: url) else { return }
+        movieImageView.image = UIImage(data: data)
         movieTitleLabel.text = movies.title
+        
         
         contentView.addSubview(movieImageView)
         contentView.addSubview(movieTitleLabel)
@@ -53,8 +55,9 @@ class movieListCollectionViewCell: UICollectionViewCell {
             $0.bottom.equalToSuperview().inset(60)
         }
         movieTitleLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(20)
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(movieImageView.snp.bottom)
+            $0.bottom.equalToSuperview()
         }
     }
 }

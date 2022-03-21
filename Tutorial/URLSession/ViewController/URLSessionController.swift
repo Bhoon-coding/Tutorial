@@ -87,7 +87,6 @@ extension UrlSessionViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCollectionViewCell.identifier, for: indexPath) as! movieListCollectionViewCell
         
         cell.setUpCell(with: movieLists[indexPath.row])
-        cell.backgroundColor = .red
         return cell
     }
     
