@@ -32,7 +32,7 @@ class UrlSessionViewController: UIViewController {
         
         movieListCollectionView.dataSource = self
         movieListCollectionView.delegate = self
-        movieListCollectionView.register(movieListCollectionViewCell.self, forCellWithReuseIdentifier: movieListCollectionViewCell.identifier)
+        movieListCollectionView.register(MovieListCollectionViewCell.self, forCellWithReuseIdentifier: MovieListCollectionViewCell.identifier)
         
     }
     
@@ -73,18 +73,19 @@ class UrlSessionViewController: UIViewController {
 
 }
 
+// MARK: UICollecionViewDataSource
+
 extension UrlSessionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieLists.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieListCollectionViewCell.identifier, for: indexPath) as! movieListCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieListCollectionViewCell.identifier, for: indexPath) as! MovieListCollectionViewCell
         
         cell.setUpCell(with: movieLists[indexPath.row])
         return cell
     }
-    
     
 }
 
