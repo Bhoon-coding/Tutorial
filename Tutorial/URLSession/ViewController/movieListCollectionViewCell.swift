@@ -17,13 +17,13 @@ class movieListCollectionViewCell: UICollectionViewCell {
     
     lazy var movieImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         return imageView
     }()
     
     lazy var movieTitleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
