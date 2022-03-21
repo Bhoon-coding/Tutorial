@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class movieListCollectionViewCell: UICollectionViewCell {
+class MovieListCollectionViewCell: UICollectionViewCell {
     
     // MARK: Properties
     
