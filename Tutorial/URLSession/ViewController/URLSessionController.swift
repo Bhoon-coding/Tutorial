@@ -32,7 +32,8 @@ class UrlSessionViewController: UIViewController {
         
         movieListCollectionView.dataSource = self
         movieListCollectionView.delegate = self
-        movieListCollectionView.register(MovieListCollectionViewCell.self, forCellWithReuseIdentifier: MovieListCollectionViewCell.identifier)
+        movieListCollectionView.register(MovieListCollectionViewCell.self,
+                                         forCellWithReuseIdentifier: MovieListCollectionViewCell.identifier)
         
     }
     

@@ -9,7 +9,7 @@ import Foundation
 
 struct APIConstant {
     
-    static let clientID = "***************"      // 본인 clientID 기입
-    static let clientSecret = "************"     // 본인 clientSecret 기입
+    static let clientID = "kUaKLDAe2wsIGnsZa6C8"      // 본인 clientID 기입
+    static let clientSecret = "DHItoIa8a8"     // 본인 clientSecret 기입
     
 }
