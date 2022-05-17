@@ -18,9 +18,14 @@
 1. [UITextField](#uitextfield)
 2. [UIScrollView](#uiscrollview)
 3. [UITableView](#uitableview)
-4. [Delegate를 이용한 ViewController간 데이터전달](#delegate를-이용한-viewcontroller간-데이터전달)
-5. [Alamofire](#alamofire)
-6. [Local notification](#local-notification)
+4. [UICollecionView](#uicollectionview)
+5. [Delegate를 이용한 ViewController간 데이터전달](#delegate를-이용한-viewcontroller간-데이터전달)
+6. [URLSession](#urlsession)
+7. [Alamofire](#alamofire)
+8. [Local notification](#local-notification)
+
+
+----
 
 ### UITextField
 
@@ -55,6 +60,19 @@
 
 ----
 
+
+### UICollectionView
+
+- URLSession으로 받아온 Movie API 데이터를 CollectionView에 보여줍니다.
+- UICollectionViewDelegate, UICollectionDataSource를 이용해 Cell 및 컬렉션뷰를 어떻게 나타낼지 정합니다.
+- UICollectionView 생성방법 이해 (register(cellClass:forCellWithReuseIdentifier:), delegate, dataSource
+- 각 cell별 layout에 대한 이해 (UICollectionViewDelegateFlowLayout)
+
+- <img width="20%" src="https://user-images.githubusercontent.com/64088377/159376927-190116e0-d63b-4cad-a8c5-507b9938f697.gif">
+
+
+----
+
 ### Delegate를 이용한 ViewController간 데이터전달
 
 - VC2에서 데이터를 입력한 후 저장하면 VC1에 저장되게 구현 하였습니다.
@@ -62,6 +80,22 @@
 
 
 - <img width="20%" src="https://user-images.githubusercontent.com/64088377/158055696-8f1ac5e9-0ede-4995-aa86-54ab8496277b.gif">
+
+----
+
+### URLSession
+
+- Get 메소드를 사용해 네이버 영화검색 API 호출 하였습니다.(request)
+- API 호출전 애플리케이션 등록 및 clientID, clientSecret키 처리하였습니다.
+- JSON 데이터 -> 객체화 하는 작업을 하였습니다.(decode)
+- UI업데이트를 위한 DispatchQueue.main.async { } 에 대한 이해를 하였습니다.
+
+- <img width="20%" alt="결과물" src="https://user-images.githubusercontent.com/64088377/159377829-0b3bf910-9f5b-4c84-805b-858e1649a1d5.png">
+
+- Postman을 활용하여 받아올 데이터를 미리 확인하고 Model을 만들었습니다. (MovieModel)
+
+- <img width="20%" alt="use_postman" src="https://user-images.githubusercontent.com/64088377/159377891-62475df1-a573-4136-93fb-83cc8725f38d.png">
+
 
 ----
 

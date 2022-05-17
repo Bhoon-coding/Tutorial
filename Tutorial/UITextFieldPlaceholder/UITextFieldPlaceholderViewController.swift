@@ -6,10 +6,22 @@
 //
 
 import UIKit
+
 import SnapKit
 
 class UITextFieldPlaceholderViewController: UIViewController {
 
+    
+    // MARK: Properties
+    
+    lazy var resultLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "결과 값"
+        label.backgroundColor = .cyan
+        return label
+    }()
+    
     lazy var textField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -20,72 +32,86 @@ class UITextFieldPlaceholderViewController: UIViewController {
         return textField
     }()
     
-    lazy var confirmButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("확인", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 10
-        button.layer.borderWidth = 1
-        return button
-    }()
+//    lazy var confirmButton: UIButton = {
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setTitle("확인", for: .normal)
+//        button.setTitleColor(.black, for: .normal)
+//        button.backgroundColor = .white
+//        button.layer.cornerRadius = 10
+//        button.layer.borderWidth = 1
+//        button.addTarget(self, action: #selector(tappedConfirm), for: .touchUpInside)
+//        return button
+//    }()
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-    
+    // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
-        
-        
-        
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillShow),
-//            name: UIResponder.keyboardWillShowNotification,
-//            object: nil
-//        )
-//
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillHide),
-//            name: UIResponder.keyboardWillHideNotification,
-//            object: nil
-//        )
+        textField.delegate = self
         setUpUI()
-//        hideKeyboard()
         
+    }
+    
+    // MARK: Methods
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.resignFirstResponder()
     }
 
-    private func setUpUI() {
-        
-        view.addSubview(textField)
-        view.addSubview(confirmButton)
-        
-        textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        textField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        confirmButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
-        confirmButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        confirmButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        confirmButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    }
     
-    
-    
-//    @objc func keyboardWillShow(_ sender: Notification) {
-//        view.frame.origin.y = -150
+    // MARK: @objc
+//    @objc func tappedConfirm() {
+//
+//        guard let text = textField.text else { return }
+//        resultLabel = text
+//
 //    }
     
-//    @objc func keyboardWillHide(_ sender: Notification) {
-//        confirmButton.frame.origin.y = 0
-//    }
 }
 
+// MARK: extension - UI
+extension UITextFieldPlaceholderViewController {
+    private func setUpUI() {
+        
+        view.addSubview(resultLabel)
+        NSLayoutConstraint.activate([
+            resultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            resultLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 250),
+        ])
+        
+        view.addSubview(textField)
+        NSLayoutConstraint.activate([
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            textField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            textField.widthAnchor.constraint(equalToConstant: 200),
+            textField.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        
+//        view.addSubview(confirmButton)
+//        NSLayoutConstraint.activate([
+//            confirmButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            confirmButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+//            confirmButton.widthAnchor.constraint(equalToConstant: 80),
+//            confirmButton.heightAnchor.constraint(equalToConstant: 40)
+//
+//        ])
+        
+    }
+}
+// MARK: extension - UITextFieldDelegate
+extension UITextFieldPlaceholderViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else { return true }
+        let trimmedText = text.trimmingCharacters(in: .whitespaces)
+        
+        resultLabel.text = trimmedText
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+// MARK: extension - UITextField
 extension UITextField {
     func leftPadding() {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
@@ -107,7 +133,8 @@ struct UITextFieldPlaceholderViewControllerRepresentable: UIViewControllerRepres
         return UITextFieldPlaceholderViewController()
     }
 
-    func updateUIViewController(_ uiViewController: UITextFieldPlaceholderViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: UITextFieldPlaceholderViewController,
+                                context: Context) {
     }
 }
 
